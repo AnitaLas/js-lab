@@ -36,7 +36,7 @@ header.innerText = "Inny header";
 const nudy = document.querySelectorAll("#app .boring");
 nudy.forEach(element => {
     alert(`Nuda: ${element.innerText}`);
-    element.classList.remove('boring');
+    //element.classList.remove('boring');
 });
 
 let div = document.createElement('div');
@@ -44,6 +44,12 @@ div.classList.add('green');
 div.innerText = 'Zielony tekst (jeśli dodasz CSS)';
 document.getElementById('app').append(div);
 
+let listItem = document.createElement('li');
+listItem.innerText = 'Zagrać';
+// dodaję na koniec listy
+document.querySelector("#app ol li:last-child").after(listItem);
+
+document.querySelectorAll("#app .boring").forEach((e) => e.remove());
 
 </script>
 </body>
