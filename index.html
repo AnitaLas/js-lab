@@ -27,7 +27,15 @@
 </div>
 <script>
 const header = document.getElementById('main-header');
-alert(header.innerText);
+header.innerText = "Inny header";
+
+const nudy = document.querySelectorAll("#app .boring");
+nudy.forEach(element => {
+    alert(`Nuda: ${element.innerText}`);
+    element.classList.remove('boring');
+});
+
+
 </script>
 </body>
 </html>
